@@ -9,16 +9,19 @@ import org.junit.jupiter.api.Test;
 public class ProfissionalTest {
 
     @Test
-    void exemploEstruturaAaa() {
-        // Arrange
+    void testeRegistrarPagamento() {
         Personal personal = new Personal("Ana", "P001");
-        // Act — troque/complete conforme a classe escolhida
-        double aulas = personal.addAulaAvulsa(1.0);
-        // Assert
-        assertEquals(0.0, aulas, 0.001,
-                "este exemplo só ilustra AAA; substitua pelos seus 2 testes");
+        double pagamento = personal.registrarPagamento();
+        assertEquals(3627.0, pagamento);
+    }
+
+    @Test
+    void testeaddAulaAvulsa() {
+        Personal personal2 = new Personal("Ricardo", "P002");
+        double aulas = personal2.addAulaAvulsa(3.0);
+        assertEquals(3.0, aulas);
     }
 
     // TODO: criar 2 testes unitários (AAA + mensagem na asserção)
-    // TODO: um deles deve testar registrarPagamento
+    // TODO: um deles deve testar registrarPagamento (FEITO)
 }

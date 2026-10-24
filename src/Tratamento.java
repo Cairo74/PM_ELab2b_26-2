@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -40,7 +39,7 @@ public class Tratamento {
              }
         }
         
-    }
+
 
     public String getNome() {
         return nome;
@@ -50,3 +49,4 @@ public class Tratamento {
     public String toString() {
         return nome + " | inicio=" + iniciadoEm + " | fim=" + finalizadoEm;
     }
+}

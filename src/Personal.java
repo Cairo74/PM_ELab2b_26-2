@@ -25,15 +25,14 @@ public class Personal extends Profissional {
      * @return a quantidade efetiva de aulas avulsas após a operação
      */
     public double addAulaAvulsa(double quantidade) {
-
-        if(quantidade <= 0){
+        // TODO: se quantidade <= 0, não altera e devolve aulasAvulsas atual
+        // TODO: soma quantidade, sem ultrapassar MAX_AULAS_AVULSAS; devolve o novo total (FEITO)
+        if(quantidade <= 0 || aulasAvulsas > MAX_AULAS_AVULSAS){
             return aulasAvulsas;
         }else{
-
+            aulasAvulsas += quantidade;
         }
-
-        // TODO: se quantidade <= 0, não altera e devolve aulasAvulsas atual
-        // TODO: soma quantidade, sem ultrapassar MAX_AULAS_AVULSAS; devolve o novo total
+        return aulasAvulsas;
     }
 
     /**
