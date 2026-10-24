@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -29,8 +30,16 @@ public class Tratamento {
      * @return -1 se o tratamento ainda não foi finalizado
      */
     public int diasAposFinalizacao() {
-        // TODO: se finalizadoEm == null, devolver -1; senão, dias entre finalizadoEm e LocalDate.now()
-        return 0;
+        //(FEITO)
+        LocalDate horarioAtual = LocalDate.now();
+
+        if(finalizadoEm == null){ 
+            return -1;
+        }else{
+            return (int) ChronoUnit.DAYS.between(finalizadoEm, LocalDate.now());
+             }
+        }
+        
     }
 
     public String getNome() {
@@ -41,4 +50,3 @@ public class Tratamento {
     public String toString() {
         return nome + " | inicio=" + iniciadoEm + " | fim=" + finalizadoEm;
     }
-}

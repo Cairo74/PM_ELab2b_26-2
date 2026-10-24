@@ -45,8 +45,12 @@ public class Fisioterapeuta extends Profissional {
      */
     @Override
     public double registrarPagamento() {
-        // TODO: calcular total, armazenar em ultimoPagamento e devolver
-        return 0.0;
+        // TODO: calcular total, armazenar em ultimoPagamento e devolver (FEITO)
+
+        double totalMensalFisio = SALARIO_FISIO + valorBonus();
+    
+        ultimoPagamento = totalMensalFisio;
+        return totalMensalFisio;
     }
 
     @Override
